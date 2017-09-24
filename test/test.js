@@ -1,9 +1,9 @@
-var rx = require("rxjs/Rx");
-var easing = require("../lib/rx.easing");
+var Rx = require("rxjs/Rx");
+require("../lib/rx.easing");
 
 // Helper function to get input data for an easing function
 function getData(name, args) {
-	rx.Observable[name].apply(null, args)
+	Rx.Observable[name].apply(null, args)
 		.toArray()
 		.subscribe(array => {
 			console.log("Data for " + name);
@@ -61,7 +61,7 @@ function compareResults(name, actual, expected) {
 // with the specified arguments.
 function test(names, args, expected) {
 	names.forEach(function(name) {
-		rx.Observable[name].apply(null, args)
+		Rx.Observable[name].apply(null, args)
 			.toArray()
 			.subscribe(
 				(actual) => {

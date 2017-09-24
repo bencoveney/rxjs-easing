@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>RxJS Easing</title>
+    <meta name="description" content="RxJS easing documentation">
+    <meta name="author" content="Paul Taylor">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>RxJS-Easing</h1>
+
+        <p>Observable easing functions based on the <a href="http://robertpenner.com/easing/">Robert Penner's equations</a>.</p>
+
+        <ul>
+            <li><a href="https://github.com/trxcllnt/rxjs-easing">View on GitHub</a></li>
+            <li><a href="https://www.npmjs.com/package/rxjs-easing">View on NPM</a></li>
+            <li><a href="http://easings.net/">Easings.net documentation</a></li>
+        </ul>
+
+        <hr />
+
+        <h2>Usage</h2>
+
+        <p>Install via NPM:</p>
+
+        <pre><code>npm install --save rxjs-easing</code></pre>
+
+        <p>Require it to make the functions available:</p>
+
+        <pre><code>var Rx = require("rxjs/Rx");
+require("rx.easing");
+
+var myObservable = Rx.Observable.linear(0, 500, 2000);</code></pre>
+
+        <hr />
+
+        <div class="easing">
+            <h2>Back In</h2>
+            <pre><code><span class="comment">// The value to start from.</span>
+var begin = <span class="number">0</span>;
+<span class="comment">// The value to end on.</span>
+var end = <span class="number">100</span>;
+<span class="comment">// The length of the easing (in milliseconds).</span>
+var duration = <span class="number">2000</span>;
+
+Rx.Observable.backIn(begin, end, duration);</code></pre>
+            <div class="demo">
+                <button>Play</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="bundle.js"></script>
+</body>
+</html>

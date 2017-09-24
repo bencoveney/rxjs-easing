@@ -1,0 +1,74 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    background-color: #ECF0F1;
+}
+
+a:link, a:hover, a:active, a:visited {
+    color: #2980B9;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.wrapper {
+    max-width: 800px;
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #FFF;
+}
+
+hr {
+    border: 0.5px dashed #E74C3C;
+    margin: 1em 30%;
+}
+
+pre code {
+    background-color: #ECF0F1;
+    color: #2C3E50;
+    border-radius: 5px;
+    display: block;
+    padding: 10px;
+}
+
+pre code .comment {
+    color: #2980B9;
+}
+
+pre code .number {
+    color: #E74C3C;
+}
+
+.easing table {
+    width: 100%;
+    margin-bottom: 0.5em;
+    text-align: left;
+}
+
+.easing .demo {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    background-color: #ECF0F1;
+}
+
+.easing .demo button {
+    position: absolute;
+    background-color: #2980B9;
+    border: 3px #3498DB outset;
+    color: white;
+    padding: 10px;
+    top: 0;
+    left: 0;
+    outline: none;
+    height: 100%;
+    cursor: pointer;
+}
+
+.easing .demo button:active {
+    border: 3px #3498DB inset;
+}
