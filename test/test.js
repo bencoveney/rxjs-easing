@@ -1,4 +1,4 @@
-var rx = require("rx");
+var rx = require("rxjs/Rx");
 var easing = require("../lib/rx.easing");
 
 // Helper function to get input data for an easing function
@@ -19,9 +19,6 @@ var tolerance = 0.1;
 
 // Checks that the actual and expected results are the same for a named function.
 function compareResults(name, actual, expected) {
-	// Include the easing function name in the output.
-	var logError = function(message) { console.error(name + ": " + message) };
-
 	// Timing functions are inconsistent and can sometimes give us
 	// one "0" fewer than usual - usually the first time we use one.
 	if (actual.length == expected.length - 1) {
@@ -31,7 +28,9 @@ function compareResults(name, actual, expected) {
 
 	// Check the lengths match.
 	if (expected.length !== actual.length) {
-		logError(`${name}: Expected ${expected.length} values but got ${actual.length}`);
+		console.error(
+			`${name}: Expected ${expected.length} values but got ${actual.length}`
+		);
 	}
 
 	// Check each value.
@@ -51,7 +50,9 @@ function compareResults(name, actual, expected) {
 		var tooDifferent = difference >= tolerance;
 
 		if (difference >= tolerance || notNumber) {
-			logError(`${name} @ ${index}: Expected ${expectedValue} but got ${actualValue}`);
+			console.error(
+				`${name} @ ${index}: Expected ${expectedValue} but got ${actualValue}`
+			);
 		}
 	}
 }

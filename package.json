@@ -16,8 +16,7 @@
     "easing"
   ],
   "dependencies": {
-    "rx": "2.5.3",
-    "rx-dom": "*"
+    "rxjs": "^5.4.3"
   },
   "author": "Paul Taylor <paul.e.taylor@me.com>",
   "license": "MIT",
