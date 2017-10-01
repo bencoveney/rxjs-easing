@@ -40,9 +40,8 @@ var myObservable = Rx.Observable.linear(0, 500, 2000);</code></pre>
 
         <hr />
 
-        <div class="easing">
-            <h2>Back In</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
+        <h2>Back</h2>
+        <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
 var end = <span class="number">100</span>;
@@ -51,211 +50,91 @@ var duration = <span class="number">2000</span>;
 <span class="comment">// The amount to overshoot by.</span>
 var overshoot = <span class="number">2</span>;
 
-Rx.Observable.backIn(begin, end, duration, overshoot);</code></pre>
-            <div class="demo" data-demo="backIn">
-                <button>Play</button>
-            </div>
-        </div>
+<span class="comment">// Ease in.</span>
+Rx.Observable.backIn(begin, end, duration, overshoot);
 
-        <hr />
+<span class="comment">// Ease out.</span>
+Rx.Observable.backOut(begin, end, duration, overshoot);
 
-        <div class="easing">
-            <h2>Back Out</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
-var begin = <span class="number">0</span>;
-<span class="comment">// The value to end on.</span>
-var end = <span class="number">100</span>;
-<span class="comment">// The length of the easing in milliseconds.</span>
-var duration = <span class="number">2000</span>;
-<span class="comment">// The amount to overshoot by.</span>
-var overshoot = <span class="number">2</span>;
-
-Rx.Observable.backOut(begin, end, duration, overshoot);</code></pre>
-            <div class="demo" data-demo="backOut">
-                <button>Play</button>
-            </div>
-        </div>
-
-        <hr />
-
-        <div class="easing">
-            <h2>Back In & Out</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
-var begin = <span class="number">0</span>;
-<span class="comment">// The value to end on.</span>
-var end = <span class="number">100</span>;
-<span class="comment">// The length of the easing in milliseconds.</span>
-var duration = <span class="number">2000</span>;
-<span class="comment">// The amount to overshoot by.</span>
-var overshoot = <span class="number">2</span>;
-
+<span class="comment">// Ease in & out.</span>
 Rx.Observable.backInOut(begin, end, duration, overshoot);</code></pre>
-            <div class="demo" data-demo="backInOut">
-                <button>Play</button>
-            </div>
-        </div>
+        <div class="demo" data-demo="backIn"><button>In</button></div>
+        <div class="demo" data-demo="backOut"><button>Out</button></div>
+        <div class="demo" data-demo="backInOut"><button>In & Out</button></div>
 
         <hr />
 
-        <div class="easing">
-            <h2>Bounce In</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
+        <h2>Bounce</h2>
+        <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
 var end = <span class="number">100</span>;
 <span class="comment">// The length of the easing in milliseconds.</span>
 var duration = <span class="number">2000</span>;
 
-Rx.Observable.bounceIn(begin, end, duration);</code></pre>
-            <div class="demo" data-demo="bounceIn">
-                <button>Play</button>
-            </div>
-        </div>
+<span class="comment">// Ease in.</span>
+Rx.Observable.bounceIn(begin, end, duration);
 
-        <hr />
+<span class="comment">// Ease out.</span>
+Rx.Observable.bounceOut(begin, end, duration);
 
-        <div class="easing">
-            <h2>Bounce Out</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
-var begin = <span class="number">0</span>;
-<span class="comment">// The value to end on.</span>
-var end = <span class="number">100</span>;
-<span class="comment">// The length of the easing in milliseconds.</span>
-var duration = <span class="number">2000</span>;
-
-Rx.Observable.bounceOut(begin, end, duration);</code></pre>
-            <div class="demo" data-demo="bounceOut">
-                <button>Play</button>
-            </div>
-        </div>
-
-        <hr />
-
-        <div class="easing">
-            <h2>Bounce In & Out</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
-var begin = <span class="number">0</span>;
-<span class="comment">// The value to end on.</span>
-var end = <span class="number">100</span>;
-<span class="comment">// The length of the easing in milliseconds.</span>
-var duration = <span class="number">2000</span>;
-
+<span class="comment">// Ease in & out.</span>
 Rx.Observable.bounceInOut(begin, end, duration);</code></pre>
-            <div class="demo" data-demo="bounceInOut">
-                <button>Play</button>
-            </div>
-        </div>
+        <div class="demo" data-demo="bounceIn"><button>In</button></div>
+        <div class="demo" data-demo="bounceOut"><button>Out</button></div>
+        <div class="demo" data-demo="bounceInOut"><button>In & Out</button></div>
 
         <hr />
 
-        <div class="easing">
-            <h2>Circle In</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
+        <h2>Circle</h2>
+        <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
 var end = <span class="number">100</span>;
 <span class="comment">// The length of the easing in milliseconds.</span>
 var duration = <span class="number">2000</span>;
 
+<span class="comment">// Ease in.</span>
 Rx.Observable.circIn(begin, end, duration);
-Rx.Observable.circleIn(begin, end, duration);</code></pre>
-            <div class="demo" data-demo="circleIn">
-                <button>Play</button>
-            </div>
-        </div>
+Rx.Observable.circleIn(begin, end, duration);
 
-        <hr />
-
-        <div class="easing">
-            <h2>Circle Out</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
-var begin = <span class="number">0</span>;
-<span class="comment">// The value to end on.</span>
-var end = <span class="number">100</span>;
-<span class="comment">// The length of the easing in milliseconds.</span>
-var duration = <span class="number">2000</span>;
-
+<span class="comment">// Ease out.</span>
 Rx.Observable.circOut(begin, end, duration);
-Rx.Observable.circleOut(begin, end, duration);</code></pre>
-            <div class="demo" data-demo="circleOut">
-                <button>Play</button>
-            </div>
-        </div>
+Rx.Observable.circleOut(begin, end, duration);
 
-        <hr />
-
-        <div class="easing">
-            <h2>Circle In & Out</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
-var begin = <span class="number">0</span>;
-<span class="comment">// The value to end on.</span>
-var end = <span class="number">100</span>;
-<span class="comment">// The length of the easing in milliseconds.</span>
-var duration = <span class="number">2000</span>;
-
+<span class="comment">// Ease in & out.</span>
 Rx.Observable.circInOut(begin, end, duration);
 Rx.Observable.circleInOut(begin, end, duration);</code></pre>
-            <div class="demo" data-demo="circleInOut">
-                <button>Play</button>
-            </div>
-        </div>
+        <div class="demo" data-demo="circleIn"><button>In</button></div>
+        <div class="demo" data-demo="circleOut"><button>Out</button></div>
+        <div class="demo" data-demo="circleInOut"><button>In & Out</button></div>
 
         <hr />
 
-        <div class="easing">
-            <h2>Cubic In</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
+        <h2>Cubic</h2>
+        <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
 var end = <span class="number">100</span>;
 <span class="comment">// The length of the easing in milliseconds.</span>
 var duration = <span class="number">2000</span>;
 
-Rx.Observable.cubicIn(begin, end, duration);</code></pre>
-            <div class="demo" data-demo="cubicIn">
-                <button>Play</button>
-            </div>
-        </div>
+<span class="comment">// Ease in.</span>
+Rx.Observable.cubicIn(begin, end, duration);
 
-        <hr />
+<span class="comment">// Ease out.</span>
+Rx.Observable.cubicOut(begin, end, duration);
 
-        <div class="easing">
-            <h2>Cubic Out</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
-var begin = <span class="number">0</span>;
-<span class="comment">// The value to end on.</span>
-var end = <span class="number">100</span>;
-<span class="comment">// The length of the easing in milliseconds.</span>
-var duration = <span class="number">2000</span>;
-
-Rx.Observable.cubicOut(begin, end, duration);</code></pre>
-            <div class="demo" data-demo="cubicOut">
-                <button>Play</button>
-            </div>
-        </div>
-
-        <hr />
-
-        <div class="easing">
-            <h2>Cubic In & Out</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
-var begin = <span class="number">0</span>;
-<span class="comment">// The value to end on.</span>
-var end = <span class="number">100</span>;
-<span class="comment">// The length of the easing in milliseconds.</span>
-var duration = <span class="number">2000</span>;
-
+<span class="comment">// Ease in & out.</span>
 Rx.Observable.cubicInOut(begin, end, duration);</code></pre>
-            <div class="demo" data-demo="cubicInOut">
-                <button>Play</button>
-            </div>
-        </div>
+        <div class="demo" data-demo="cubicIn"><button>In</button></div>
+        <div class="demo" data-demo="cubicOut"><button>Out</button></div>
+        <div class="demo" data-demo="cubicInOut"><button>In & Out</button></div>
 
         <hr />
 
-        <div class="easing">
-            <h2>Elastic In</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
+        <h2>Elastic</h2>
+        <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
 var end = <span class="number">100</span>;
@@ -266,329 +145,145 @@ var amplitude = <span class="number">1</span>;
 <span class="comment">// The (optional) period in milliseconds - how often the bounces happen.</span>
 var period = <span class="number">750</span>;
 
-Rx.Observable.elasticIn(begin, end, duration, amplitude, period);</code></pre>
-            <div class="demo" data-demo="elasticIn">
-                <button>Play</button>
-            </div>
-        </div>
+<span class="comment">// Ease in.</span>
+Rx.Observable.elasticIn(begin, end, duration, amplitude, period);
 
-        <hr />
+<span class="comment">// Ease out.</span>
+Rx.Observable.elasticOut(begin, end, duration, amplitude, period);
 
-        <div class="easing">
-            <h2>Elastic Out</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
-var begin = <span class="number">0</span>;
-<span class="comment">// The value to end on.</span>
-var end = <span class="number">100</span>;
-<span class="comment">// The length of the easing in milliseconds.</span>
-var duration = <span class="number">2000</span>;
-<span class="comment">// The (optional) amplitude - how big the bounces are.</span>
-var amplitude = <span class="number">1</span>;
-<span class="comment">// The (optional) period in milliseconds - how often the bounces happen.</span>
-var period = <span class="number">750</span>;
-
-Rx.Observable.elasticOut(begin, end, duration, amplitude, period);</code></pre>
-            <div class="demo" data-demo="elasticOut">
-                <button>Play</button>
-            </div>
-        </div>
-
-        <hr />
-
-        <div class="easing">
-            <h2>Elastic In & Out</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
-var begin = <span class="number">0</span>;
-<span class="comment">// The value to end on.</span>
-var end = <span class="number">100</span>;
-<span class="comment">// The length of the easing in milliseconds.</span>
-var duration = <span class="number">2000</span>;
-<span class="comment">// The (optional) amplitude - how big the bounces are.</span>
-var amplitude = <span class="number">1</span>;
-<span class="comment">// The (optional) period in milliseconds - how often the bounces happen.</span>
-var period = <span class="number">750</span>;
-
+<span class="comment">// Ease in & out.</span>
 Rx.Observable.elasticInOut(begin, end, duration, amplitude, period);</code></pre>
-            <div class="demo" data-demo="elasticInOut">
-                <button>Play</button>
-            </div>
-        </div>
+        <div class="demo" data-demo="elasticIn"><button>In</button></div>
+        <div class="demo" data-demo="elasticOut"><button>Out</button></div>
+        <div class="demo" data-demo="elasticInOut"><button>In & Out</button></div>
 
         <hr />
 
-        <div class="easing">
-            <h2>Exponential In</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
+        <h2>Exponential</h2>
+        <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
 var end = <span class="number">100</span>;
 <span class="comment">// The length of the easing in milliseconds.</span>
 var duration = <span class="number">2000</span>;
 
-Rx.Observable.expoIn(begin, end, duration);</code></pre>
-            <div class="demo" data-demo="expoIn">
-                <button>Play</button>
-            </div>
-        </div>
+<span class="comment">// Ease in.</span>
+Rx.Observable.expoIn(begin, end, duration);
 
-        <hr />
+<span class="comment">// Ease out.</span>
+Rx.Observable.expoOut(begin, end, duration);
 
-        <div class="easing">
-            <h2>Exponential Out</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
-var begin = <span class="number">0</span>;
-<span class="comment">// The value to end on.</span>
-var end = <span class="number">100</span>;
-<span class="comment">// The length of the easing in milliseconds.</span>
-var duration = <span class="number">2000</span>;
-
-Rx.Observable.expoOut(begin, end, duration);</code></pre>
-            <div class="demo" data-demo="expoOut">
-                <button>Play</button>
-            </div>
-        </div>
-
-        <hr />
-
-        <div class="easing">
-            <h2>Exponential In & Out</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
-var begin = <span class="number">0</span>;
-<span class="comment">// The value to end on.</span>
-var end = <span class="number">100</span>;
-<span class="comment">// The length of the easing in milliseconds.</span>
-var duration = <span class="number">2000</span>;
-
+<span class="comment">// Ease in & out.</span>
 Rx.Observable.expoInOut(begin, end, duration);</code></pre>
-            <div class="demo" data-demo="expoInOut">
-                <button>Play</button>
-            </div>
-        </div>
+        <div class="demo" data-demo="expoIn"><button>In</button></div>
+        <div class="demo" data-demo="expoOut"><button>Out</button></div>
+        <div class="demo" data-demo="expoInOut"><button>In & Out</button></div>
 
         <hr />
 
-        <div class="easing">
-            <h2>Linear</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
+        <h2>Linear</h2>
+        <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
 var end = <span class="number">100</span>;
 <span class="comment">// The length of the easing in milliseconds.</span>
 var duration = <span class="number">2000</span>;
 
+<span class="comment">// Ease - in and out are the same for linear.</span>
 Rx.Observable.linear(begin, end, duration);
 Rx.Observable.linearIn(begin, end, duration);
 Rx.Observable.linearOut(begin, end, duration);
 Rx.Observable.linearInOut(begin, end, duration);
 Rx.Observable.linearNone(begin, end, duration);</code></pre>
-            <div class="demo" data-demo="linear">
-                <button>Play</button>
-            </div>
-        </div>
+        <div class="demo" data-demo="linear"><button>Ease</button></div>
 
         <hr />
 
-        <div class="easing">
-            <h2>Quadratic In</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
+        <h2>Quadratic</h2>
+        <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
 var end = <span class="number">100</span>;
 <span class="comment">// The length of the easing in milliseconds.</span>
 var duration = <span class="number">2000</span>;
 
-Rx.Observable.quadIn(begin, end, duration);</code></pre>
-            <div class="demo" data-demo="quadIn">
-                <button>Play</button>
-            </div>
-        </div>
+<span class="comment">// Ease in.</span>
+Rx.Observable.quadIn(begin, end, duration);
 
-        <hr />
+<span class="comment">// Ease out.</span>
+Rx.Observable.quadOut(begin, end, duration);
 
-        <div class="easing">
-            <h2>Quadratic Out</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
-var begin = <span class="number">0</span>;
-<span class="comment">// The value to end on.</span>
-var end = <span class="number">100</span>;
-<span class="comment">// The length of the easing in milliseconds.</span>
-var duration = <span class="number">2000</span>;
-
-Rx.Observable.quadOut(begin, end, duration);</code></pre>
-            <div class="demo" data-demo="quadOut">
-                <button>Play</button>
-            </div>
-        </div>
-
-        <hr />
-
-        <div class="easing">
-            <h2>Quadratic In & Out</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
-var begin = <span class="number">0</span>;
-<span class="comment">// The value to end on.</span>
-var end = <span class="number">100</span>;
-<span class="comment">// The length of the easing in milliseconds.</span>
-var duration = <span class="number">2000</span>;
-
+<span class="comment">// Ease in & out.</span>
 Rx.Observable.quadInOut(begin, end, duration);</code></pre>
-            <div class="demo" data-demo="quadInOut">
-                <button>Play</button>
-            </div>
-        </div>
+        <div class="demo" data-demo="quadIn"><button>In</button></div>
+        <div class="demo" data-demo="quadOut"><button>Out</button></div>
+        <div class="demo" data-demo="quadInOut"><button>In & Out</button></div>
 
         <hr />
 
-        <div class="easing">
-            <h2>Quartic In</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
+        <h2>Quartic</h2>
+        <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
 var end = <span class="number">100</span>;
 <span class="comment">// The length of the easing in milliseconds.</span>
 var duration = <span class="number">2000</span>;
 
-Rx.Observable.quartIn(begin, end, duration);</code></pre>
-            <div class="demo" data-demo="quartIn">
-                <button>Play</button>
-            </div>
-        </div>
+<span class="comment">// Ease in.</span>
+Rx.Observable.quartIn(begin, end, duration);
 
-        <hr />
+<span class="comment">// Ease out.</span>
+Rx.Observable.quartOut(begin, end, duration);
 
-        <div class="easing">
-            <h2>Quartic Out</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
-var begin = <span class="number">0</span>;
-<span class="comment">// The value to end on.</span>
-var end = <span class="number">100</span>;
-<span class="comment">// The length of the easing in milliseconds.</span>
-var duration = <span class="number">2000</span>;
-
-Rx.Observable.quartOut(begin, end, duration);</code></pre>
-            <div class="demo" data-demo="quartOut">
-                <button>Play</button>
-            </div>
-        </div>
-
-        <hr />
-
-        <div class="easing">
-            <h2>Quartic In & Out</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
-var begin = <span class="number">0</span>;
-<span class="comment">// The value to end on.</span>
-var end = <span class="number">100</span>;
-<span class="comment">// The length of the easing in milliseconds.</span>
-var duration = <span class="number">2000</span>;
-
+<span class="comment">// Ease in & out.</span>
 Rx.Observable.quartInOut(begin, end, duration);</code></pre>
-            <div class="demo" data-demo="quartInOut">
-                <button>Play</button>
-            </div>
-        </div>
+        <div class="demo" data-demo="quartIn"><button>In</button></div>
+        <div class="demo" data-demo="quartOut"><button>Out</button></div>
+        <div class="demo" data-demo="quartInOut"><button>In & Out</button></div>
 
         <hr />
 
-        <div class="easing">
-            <h2>Quintic In</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
+        <h2>Quintic</h2>
+        <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
 var end = <span class="number">100</span>;
 <span class="comment">// The length of the easing in milliseconds.</span>
 var duration = <span class="number">2000</span>;
 
-Rx.Observable.quintIn(begin, end, duration);</code></pre>
-            <div class="demo" data-demo="quintIn">
-                <button>Play</button>
-            </div>
-        </div>
+<span class="comment">// Ease in.</span>
+Rx.Observable.quintIn(begin, end, duration);
 
-        <hr />
+<span class="comment">// Ease out.</span>
+Rx.Observable.quintOut(begin, end, duration);
 
-        <div class="easing">
-            <h2>Quintic Out</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
-var begin = <span class="number">0</span>;
-<span class="comment">// The value to end on.</span>
-var end = <span class="number">100</span>;
-<span class="comment">// The length of the easing in milliseconds.</span>
-var duration = <span class="number">2000</span>;
-
-Rx.Observable.quintOut(begin, end, duration);</code></pre>
-            <div class="demo" data-demo="quintOut">
-                <button>Play</button>
-            </div>
-        </div>
-
-        <hr />
-
-        <div class="easing">
-            <h2>Quintic In & Out</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
-var begin = <span class="number">0</span>;
-<span class="comment">// The value to end on.</span>
-var end = <span class="number">100</span>;
-<span class="comment">// The length of the easing in milliseconds.</span>
-var duration = <span class="number">2000</span>;
-
+<span class="comment">// Ease in & out.</span>
 Rx.Observable.quintInOut(begin, end, duration);</code></pre>
-            <div class="demo" data-demo="quintInOut">
-                <button>Play</button>
-            </div>
-        </div>
+        <div class="demo" data-demo="quintIn"><button>In</button></div>
+        <div class="demo" data-demo="quintOut"><button>Out</button></div>
+        <div class="demo" data-demo="quintInOut"><button>In & Out</button></div>
 
         <hr />
 
-        <div class="easing">
-            <h2>Sine In</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
+        <h2>Sine</h2>
+        <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
 var end = <span class="number">100</span>;
 <span class="comment">// The length of the easing in milliseconds.</span>
 var duration = <span class="number">2000</span>;
 
-Rx.Observable.sineIn(begin, end, duration);</code></pre>
-            <div class="demo" data-demo="sineIn">
-                <button>Play</button>
-            </div>
-        </div>
+<span class="comment">// Ease in.</span>
+Rx.Observable.sineIn(begin, end, duration);
 
-        <hr />
+<span class="comment">// Ease out.</span>
+Rx.Observable.sineOut(begin, end, duration);
 
-        <div class="easing">
-            <h2>Sine Out</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
-var begin = <span class="number">0</span>;
-<span class="comment">// The value to end on.</span>
-var end = <span class="number">100</span>;
-<span class="comment">// The length of the easing in milliseconds.</span>
-var duration = <span class="number">2000</span>;
-
-Rx.Observable.sineOut(begin, end, duration);</code></pre>
-            <div class="demo" data-demo="sineOut">
-                <button>Play</button>
-            </div>
-        </div>
-
-        <hr />
-
-        <div class="easing">
-            <h2>Sine In & Out</h2>
-            <pre><code><span class="comment">// The value to start from.</span>
-var begin = <span class="number">0</span>;
-<span class="comment">// The value to end on.</span>
-var end = <span class="number">100</span>;
-<span class="comment">// The length of the easing in milliseconds.</span>
-var duration = <span class="number">2000</span>;
-
+<span class="comment">// Ease in & out.</span>
 Rx.Observable.sineInOut(begin, end, duration);</code></pre>
-            <div class="demo" data-demo="sineInOut">
-                <button>Play</button>
-            </div>
-        </div>
+        <div class="demo" data-demo="sineIn"><button>In</button></div>
+        <div class="demo" data-demo="sineOut"><button>Out</button></div>
+        <div class="demo" data-demo="sineInOut"><button>In & Out</button></div>
     </div>
 
     <script src="bundle.js"></script>

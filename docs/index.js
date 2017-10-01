@@ -24,6 +24,7 @@ function initializeButton(button, easingName) {
     button.addEventListener(
         "click",
         function() {
+            console.log("clicking")
             button.disabled = true;
             // Run the easing observable, then wait 0.5s and reset the position.
             Rx.Observable[easingName].apply(Rx.Observable, demoArguments)
@@ -39,7 +40,8 @@ function initializeButton(button, easingName) {
 }
 
 function initializeAllButtons() {
-    var demos = document.querySelectorAll(".easing .demo");
+    console.log("initializing");
+    var demos = document.querySelectorAll(".demo");
     for (var index = 0; index < demos.length; index++) {
         var demo = demos[index];
         initializeButton(demo.querySelector("button"), demo.dataset.demo);

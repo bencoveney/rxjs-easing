@@ -43,20 +43,15 @@ pre code .number {
     color: #E74C3C;
 }
 
-.easing table {
-    width: 100%;
-    margin-bottom: 0.5em;
-    text-align: left;
-}
-
-.easing .demo {
+.demo {
     width: 100%;
     height: 40px;
     position: relative;
     background-color: #ECF0F1;
+    margin-bottom: 1em;
 }
 
-.easing .demo button {
+.demo button {
     position: absolute;
     background-color: #2980B9;
     border: 3px #3498DB outset;
@@ -69,6 +64,6 @@ pre code .number {
     cursor: pointer;
 }
 
-.easing .demo button:active {
+.demo button:active {
     border: 3px #3498DB inset;
 }
