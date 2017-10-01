@@ -15,6 +15,10 @@
     <div class="wrapper">
         <h1>RxJS-Easing</h1>
 
+        <hr />
+
+        <h2>About</h2>
+
         <p>Observable easing functions based on the <a href="http://robertpenner.com/easing/">Robert Penner's equations</a>.</p>
 
         <ul>
@@ -23,9 +27,32 @@
             <li><a href="http://easings.net/">Easings.net documentation</a></li>
         </ul>
 
+        <h3>Jump To</h3>
+
+        <ul>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#usage">Usage</a></li>
+            <li><a href="#example">Example</a></li>
+            <li>API:
+                <ul>
+                    <li><a href="#back">Back</a></li>
+                    <li><a href="#bounce">Bounce</a></li>
+                    <li><a href="#circle">Circle</a></li>
+                    <li><a href="#cubic">Cubic</a></li>
+                    <li><a href="#elastic">Elastic</a></li>
+                    <li><a href="#exponential">Exponential</a></li>
+                    <li><a href="#linear">Linear</a></li>
+                    <li><a href="#quadratic">Quadratic</a></li>
+                    <li><a href="#quartic">Quartic</a></li>
+                    <li><a href="#quintic">Quintic</a></li>
+                    <li><a href="#sine">Sine</a></li>
+                </ul>
+            </li>
+        </ul>
+
         <hr />
-        
-        <h2>Installation</h2>
+
+        <h2 id="installation">Installation</h2>
 
         <p>Install via NPM:</p>
 
@@ -33,7 +60,7 @@
 
         <hr />
 
-        <h2>Usage</h2>
+        <h2 id="usage">Usage</h2>
 
         <p>Require it to make the functions available:</p>
 
@@ -44,7 +71,9 @@ var myObservable = Rx.Observable.linear(0, 500, 2000);</code></pre>
 
         <hr />
 
-        <h2>Example</h2>
+        <h2 id="example">Example</h2>
+
+        <p>Make a button bounce on click!</p>
 
         <pre><code>var Rx = require("rxjs/Rx");
 require("rxjs-easing");
@@ -71,8 +100,8 @@ window.addEventListener("load", function() {
         <button class="example">Try Example</button>
 
         <hr />
-        
-        <h2>API: Back</h2>
+
+        <h2 id="back">API: Back</h2>
         <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
@@ -96,7 +125,7 @@ Rx.Observable.backInOut(begin, end, duration, overshoot);</code></pre>
 
         <hr />
 
-        <h2>API: Bounce</h2>
+        <h2 id="bounce">API: Bounce</h2>
         <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
@@ -118,7 +147,7 @@ Rx.Observable.bounceInOut(begin, end, duration);</code></pre>
 
         <hr />
 
-        <h2>API: Circle</h2>
+        <h2 id="circle">API: Circle</h2>
         <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
@@ -143,7 +172,7 @@ Rx.Observable.circleInOut(begin, end, duration);</code></pre>
 
         <hr />
 
-        <h2>API: Cubic</h2>
+        <h2 id="cubic">API: Cubic</h2>
         <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
@@ -165,7 +194,7 @@ Rx.Observable.cubicInOut(begin, end, duration);</code></pre>
 
         <hr />
 
-        <h2>API: Elastic</h2>
+        <h2 id="elastic">API: Elastic</h2>
         <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
@@ -191,7 +220,7 @@ Rx.Observable.elasticInOut(begin, end, duration, amplitude, period);</code></pre
 
         <hr />
 
-        <h2>API: Exponential</h2>
+        <h2 id="exponential">API: Exponential</h2>
         <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
@@ -213,7 +242,7 @@ Rx.Observable.expoInOut(begin, end, duration);</code></pre>
 
         <hr />
 
-        <h2>API: Linear</h2>
+        <h2 id="linear">API: Linear</h2>
         <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
@@ -231,7 +260,7 @@ Rx.Observable.linearNone(begin, end, duration);</code></pre>
 
         <hr />
 
-        <h2>API: Quadratic</h2>
+        <h2 id="quadratic">API: Quadratic</h2>
         <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
@@ -253,7 +282,7 @@ Rx.Observable.quadInOut(begin, end, duration);</code></pre>
 
         <hr />
 
-        <h2>API: Quartic</h2>
+        <h2 id="quartic">API: Quartic</h2>
         <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
@@ -275,7 +304,7 @@ Rx.Observable.quartInOut(begin, end, duration);</code></pre>
 
         <hr />
 
-        <h2>API: Quintic</h2>
+        <h2 id="quintic">API: Quintic</h2>
         <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
@@ -297,7 +326,7 @@ Rx.Observable.quintInOut(begin, end, duration);</code></pre>
 
         <hr />
 
-        <h2>API: Sine</h2>
+        <h2 id="sine">API: Sine</h2>
         <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
@@ -316,6 +345,10 @@ Rx.Observable.sineInOut(begin, end, duration);</code></pre>
         <div class="demo" data-demo="sineIn"><button>In</button></div>
         <div class="demo" data-demo="sineOut"><button>Out</button></div>
         <div class="demo" data-demo="sineInOut"><button>In & Out</button></div>
+
+        <hr />
+
+        <a class="top-link" href="#">Return to top</a>
     </div>
 
     <script src="bundle.js"></script>

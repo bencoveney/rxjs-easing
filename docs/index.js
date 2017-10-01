@@ -56,7 +56,7 @@ function initializeAllButtons() {
     }
 }
 
-// Simple demo code.
+// Simple example code.
 function initializeExample() {
     // Get the button.
     var button = document.querySelector(".example");

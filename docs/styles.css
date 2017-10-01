@@ -20,7 +20,11 @@ a:hover {
     border-radius: 5px;
     padding: 10px;
     background-color: #FFF;
-    box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.5);
+}
+
+h1 {
+    text-align: center;
 }
 
 hr {
@@ -81,4 +85,10 @@ button.example {
     left: 0;
     outline: none;
     cursor: pointer;
+}
+
+.top-link {
+    display: block;
+    text-align: center;
+    margin: 30px;
 }
