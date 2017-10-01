@@ -24,13 +24,16 @@ function initializeButton(button, easingName) {
     button.addEventListener(
         "click",
         function() {
+            button.disabled = true;
             // Run the easing observable, then wait 0.5s and reset the position.
             Rx.Observable[easingName].apply(Rx.Observable, demoArguments)
                 .concat(Rx.Observable.of(0).delay(500))
                 .subscribe(
                     function(offset) {
                         button.style.left = `${availableWidth * offset}px`;
-                    });
+                    },
+                    console.error,
+                    function() { button.disabled = false; });
         }
     );
 }
