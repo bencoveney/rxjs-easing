@@ -1,12 +1,23 @@
-rx-js-easing
+rxjs-easing
 ============
 
 Robert Penner's easing functions as Observables.
+
+Installation
+------------
+
+`npm install --save rxjs-easing`
+
+Usage
+-----
 
 ```javascript
 
 // All easing functions take a begin value, end value, and duration (in ms).
 // A few take extra arguments, which I've documented
+
+var Observable = require("rxjs/Observable");
+require("rx.easing");
 
 Observable.backIn       = function(begin, end, duration, overshoot) {};
 Observable.backOut      = function(begin, end, duration, overshoot) {};
