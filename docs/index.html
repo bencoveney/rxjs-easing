@@ -24,12 +24,16 @@
         </ul>
 
         <hr />
-
-        <h2>Usage</h2>
+        
+        <h2>Installation</h2>
 
         <p>Install via NPM:</p>
 
         <pre><code>npm install --save rxjs-easing</code></pre>
+
+        <hr />
+
+        <h2>Usage</h2>
 
         <p>Require it to make the functions available:</p>
 
@@ -40,7 +44,35 @@ var myObservable = Rx.Observable.linear(0, 500, 2000);</code></pre>
 
         <hr />
 
-        <h2>Back</h2>
+        <h2>Example</h2>
+
+        <pre><code>var Rx = require("rxjs/Rx");
+require("rxjs-easing");
+
+window.addEventListener("load", function() {
+    <span class="comment">// Get the button.</span>
+    var button = document.querySelector(".example");
+
+    <span class="comment">// On click...</span>
+    button.addEventListener("click", function() {
+        <span class="comment">// Prevent more clicks until the easing is complete.</span>
+        button.disabled = true;
+        
+        <span class="comment">// Bounce in, then reset.</span>
+        Rx.Observable.bounceOut(0, 300, 2000)
+            .concat(Rx.Observable.of(0).delay(500))
+            .subscribe(
+                function(offset) { button.style.left = offset + "px"; },
+                console.error,
+                function() { button.disabled = false; });
+    });
+});</code></pre>
+
+        <button class="example">Try Example</button>
+
+        <hr />
+        
+        <h2>API: Back</h2>
         <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
@@ -64,7 +96,7 @@ Rx.Observable.backInOut(begin, end, duration, overshoot);</code></pre>
 
         <hr />
 
-        <h2>Bounce</h2>
+        <h2>API: Bounce</h2>
         <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
@@ -86,7 +118,7 @@ Rx.Observable.bounceInOut(begin, end, duration);</code></pre>
 
         <hr />
 
-        <h2>Circle</h2>
+        <h2>API: Circle</h2>
         <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
@@ -111,7 +143,7 @@ Rx.Observable.circleInOut(begin, end, duration);</code></pre>
 
         <hr />
 
-        <h2>Cubic</h2>
+        <h2>API: Cubic</h2>
         <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
@@ -133,7 +165,7 @@ Rx.Observable.cubicInOut(begin, end, duration);</code></pre>
 
         <hr />
 
-        <h2>Elastic</h2>
+        <h2>API: Elastic</h2>
         <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
@@ -159,7 +191,7 @@ Rx.Observable.elasticInOut(begin, end, duration, amplitude, period);</code></pre
 
         <hr />
 
-        <h2>Exponential</h2>
+        <h2>API: Exponential</h2>
         <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
@@ -181,7 +213,7 @@ Rx.Observable.expoInOut(begin, end, duration);</code></pre>
 
         <hr />
 
-        <h2>Linear</h2>
+        <h2>API: Linear</h2>
         <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
@@ -199,7 +231,7 @@ Rx.Observable.linearNone(begin, end, duration);</code></pre>
 
         <hr />
 
-        <h2>Quadratic</h2>
+        <h2>API: Quadratic</h2>
         <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
@@ -221,7 +253,7 @@ Rx.Observable.quadInOut(begin, end, duration);</code></pre>
 
         <hr />
 
-        <h2>Quartic</h2>
+        <h2>API: Quartic</h2>
         <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
@@ -243,7 +275,7 @@ Rx.Observable.quartInOut(begin, end, duration);</code></pre>
 
         <hr />
 
-        <h2>Quintic</h2>
+        <h2>API: Quintic</h2>
         <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
@@ -265,7 +297,7 @@ Rx.Observable.quintInOut(begin, end, duration);</code></pre>
 
         <hr />
 
-        <h2>Sine</h2>
+        <h2>API: Sine</h2>
         <pre><code><span class="comment">// The value to start from.</span>
 var begin = <span class="number">0</span>;
 <span class="comment">// The value to end on.</span>
