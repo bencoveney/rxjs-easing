@@ -59,3 +59,12 @@ Observable.linearOut    = function(begin, end, duration) {};
 Observable.linearInOut  = function(begin, end, duration) {};
 
 ```
+
+Developing
+----------
+
+Use `npm install` to install dependencies.
+
+Use `npm test` to run all tests.
+
+In the `docs/` directory use `npm install` and `npm test` to build the documentation.
