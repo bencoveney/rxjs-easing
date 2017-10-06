@@ -1,6 +1,22 @@
 var Rx = require("rxjs/Rx");
 require("../lib/rx.easing");
 
+/*
+	Output can be inconsistent due to times being different between each run.
+	This can be seen by running the following a few times:
+
+	[1, 2, 3, 4, 5].forEach(function(index) {
+		Rx.Observable.timer(0, 50)
+			.takeUntil(Rx.Observable.timer(500))
+			.subscribe(function(p) { console.log(index + ": " + p) });
+	});
+
+	We need to intercept the source to ensure the function tests are consistent.
+*/
+Rx.Observable.prototype.takeUntil = function() {
+	return Rx.Observable.range(0, 16).map(function(i) { return i * (1000/30); });
+}
+
 // Helper function to get input data for an easing function
 function getData(name, args) {
 	Rx.Observable[name].apply(null, args)
@@ -14,46 +30,36 @@ function getData(name, args) {
 		})
 }
 
-// How much margin of error to accept from rounding, timing, floating point math etc.
+// Find the smallest difference between two numbers.
+function smallestDifference(a, b) {
+	return a > b ? a - b : b - a;
+}
+
+// How much margin of error to accept.
 var tolerance = 0.1;
 
 // Checks that the actual and expected results are the same for a named function.
 function compareResults(name, actual, expected) {
-	// Timing functions are inconsistent and can sometimes give us
-	// one "0" fewer than usual - usually the first time we use one.
-	if (actual.length == expected.length - 1) {
-		console.warn(`${name}: Adding a zero`);
-		actual = actual.concat(0);
-	}
+	var isError = false;
 
 	// Check the lengths match.
 	if (expected.length !== actual.length) {
-		console.error(
-			`${name}: Expected ${expected.length} values but got ${actual.length}`
-		);
+		isError = true;
+		console.error(name + ": Expected " + expected.length +
+			" values but got " + actual.length);
 	}
 
 	// Check each value.
 	var maxLength = Math.max(expected.length, actual.length);
 	for (var index = 0; index < maxLength; index++) {
-		// Get the values.
-		var expectedValue = expected[index];
-		var actualValue = actual[index];
-
-		// Check if the value is not numeric.
-		var notNumber = isNaN(expectedValue) || typeof expectedValue !== "number";
-
-		// Check if the values are too far apart.
-		var difference = expectedValue > actualValue
-			? expectedValue - actualValue
-			: actualValue - expectedValue;
-		var tooDifferent = difference >= tolerance;
-
-		if (difference >= tolerance || notNumber) {
-			console.error(
-				`${name} @ ${index}: Expected ${expectedValue} but got ${actualValue}`
-			);
+		if (smallestDifference(expected[index], actual[index]) >= tolerance) {
+			console.error(name + " @ " + index + ": Expected " +
+				expected[index] + " but got " + actual[index]);
 		}
+	}
+
+	if (!isError) {
+		console.log(name + ": Passed");
 	}
 }
 
@@ -63,11 +69,7 @@ function test(names, args, expected) {
 	names.forEach(function(name) {
 		Rx.Observable[name].apply(null, args)
 			.toArray()
-			.subscribe(
-				(actual) => {
-					compareResults(name, actual, expected);
-				}
-			);
+			.subscribe(function(actual) { compareResults(name, actual, expected); });
 	});
 }
 
